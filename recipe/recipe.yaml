@@ -1,5 +1,5 @@
 context:
-  version: 7.3.0
+  version: "7.3.1"
 
 package:
   name: cmake-js
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://registry.npmjs.org/cmake-js/-/cmake-js-${{ version }}.tgz
-  sha256: 92100f11132243e04099907991bdbbc98a62a685ad5f421164c15f88c43f7064
+  sha256: 66cefad4e89097b1e610144180caff1e7c7918bd324dd7b68b7b572368d97aa7
 
 build:
   number: 0

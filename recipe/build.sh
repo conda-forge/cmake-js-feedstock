@@ -9,6 +9,11 @@ npm install -ddd \
     --build-from-source \
     ${SRC_DIR}/${PKG_NAME}-${PKG_VERSION}.tgz
 
+# Patch package.json to remove packageManager key so that
+# pnpm-licenses can be run to create license report
+mv package.json package.json.bak
+jq 'del(.packageManager)' package.json.bak > package.json
+
 # Create license report for dependencies
 pnpm install
 pnpm-licenses generate-disclaimer --prod --output-file=third-party-licenses.txt
